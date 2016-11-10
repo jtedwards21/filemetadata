@@ -10,13 +10,12 @@ app.post('/upload', upload.single('f'), function(req, res, next){
   res.send(JSON.stringify({"size": f.size}));
 
 
-}
+});
 
 app.get('/', function (req, res) {
   //How to serve html?
-  var cf = pug.compleFile('template.pug');
-  cf({name: 'Tim'});
-  res.send(cf)
+  var cf = pug.compileFile('template.pug');
+  res.send(cf({name: 'Tim'}))
 })
 
 app.listen(3000, function () {
