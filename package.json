@@ -1,0 +1,14 @@
+{
+  "name": "filemetadata",
+  "version": "1.0.0",
+  "description": "Tells the size of a file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
