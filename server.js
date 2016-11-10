@@ -4,8 +4,8 @@ var pug = require('pug');
 var multer = require('multer')
 var upload = multer({dest: 'uploads/'}) //ops go here?
 
-app.post('/upload', upload.single('f'), function(req, res, next){
-  
+app.post('/upload', upload.single('upload'), function(req, res, next){
+  console.log(req.file);
   f = req.file;
   res.send(JSON.stringify({"size": f.size}));
 
