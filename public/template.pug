@@ -1,0 +1,22 @@
+head
+	link(rel="stylesheet" href="public/css/bootstrap.min.css")
+	link(rel="stylesheet" href="public/css/bootstrap-theme.min.css")
+	link(rel="stylesheet" href="public/css/main.css")
+body
+	div(id="content" class="container")
+		div(class="row")
+			div (id="box"class="col-md-10 col-md-offset-1")
+				h2
+					|Upload a file and see the size
+					|Use the form below to upload your file
+				form(method='post' action='/upload' enctype='multipart/form-data')
+					input(type='file' name='upload')
+					input(type='submit')
+				h2
+					|Output: Returns the size(kb) of your file in JSON format
+				h3
+					|Example Output:
+				code
+					|{"size":2484}
+				
+	

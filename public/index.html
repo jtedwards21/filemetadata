@@ -1,0 +1,32 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="public/css/bootstrap.min.css">
+<link rel="stylesheet" href="public/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="public/css/main.css">
+<script src="public/js/jquery-3.1.1.min.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div id="content" class="container">
+  <div class="row">
+      <div id="box" class="col-md-10 col-md-offset-1">
+	<h2>Upload a file and see the size</h2>
+	<h3>Use the form below to upload your file</h3>
+	<form　action="/upload" method="post" enctype="multipart/form-data">
+	  <input type="file" name="upload">
+	  <input type="submit">
+	</form>
+	<h2>Output: Returns the size(kb) of your file in JSON format</h2>
+	<h3>Example Output:</h3>
+	<code>{"size":2484}</code>
+      </div>
+  </div>
+</div>
+
+<footer class="footer"<div class="container"><a href="https://github.com/jtedwards21/imagesearch" id="github-container"><p>Check out the code on github</p></a></div></footer>
+</body>
+<script>$("#content").css("margin-top", "100px");</script>
+</html>

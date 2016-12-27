@@ -4,6 +4,8 @@ var pug = require('pug');
 var multer = require('multer')
 var upload = multer({dest: 'uploads/'}) //ops go here?
 
+app.use('/public', express.static(process.cwd() + '/public'));
+
 app.post('/upload', upload.single('upload'), function(req, res, next){
   console.log(req.file);
   f = req.file;
@@ -14,10 +16,8 @@ app.post('/upload', upload.single('upload'), function(req, res, next){
 
 app.get('/', function (req, res) {
   //How to serve html?
-  var cf = pug.compileFile('template.pug');
+  var cf = pug.compileFile('public/template.pug');
   res.send(cf({name: 'Tim'}))
 })
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-})
+app.listen(process.env.PORT || 5000);
