@@ -2,10 +2,12 @@ head
 	link(rel="stylesheet" href="public/css/bootstrap.min.css")
 	link(rel="stylesheet" href="public/css/bootstrap-theme.min.css")
 	link(rel="stylesheet" href="public/css/main.css")
+	script(src="public/js/jquery-3.1.1.min.js")
+	script(src="public/js/bootstrap.min.js")
 body
 	div(id="content" class="container")
 		div(class="row")
-			div (id="box"class="col-md-10 col-md-offset-1")
+			div(id="box" class="col-md-10 col-md-offset-1")
 				h2
 					|Upload a file and see the size
 					|Use the form below to upload your file
@@ -18,5 +20,10 @@ body
 					|Example Output:
 				code
 					|{"size":2484}
-				
-	
+	footer(class="footer")
+		div(class="container")
+			a(href="https://github.com/jtedwards21/imagesearch" id="github-container")
+				p
+					|Check out the code on github
+	script
+		|$("#content").css("margin-top", "100px");
